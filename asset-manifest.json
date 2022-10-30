@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/cinemaSearch/static/css/main.7307b836.css",
-    "main.js": "/cinemaSearch/static/js/main.8f0688a4.js",
+    "main.js": "/cinemaSearch/static/js/main.75fbaeb9.js",
     "index.html": "/cinemaSearch/index.html",
     "static/media/search.svg": "/cinemaSearch/static/media/search.fa764fc0cf293a125609c4dd2c107b49.svg",
     "main.7307b836.css.map": "/cinemaSearch/static/css/main.7307b836.css.map",
-    "main.8f0688a4.js.map": "/cinemaSearch/static/js/main.8f0688a4.js.map"
+    "main.75fbaeb9.js.map": "/cinemaSearch/static/js/main.75fbaeb9.js.map"
   },
   "entrypoints": [
     "static/css/main.7307b836.css",
-    "static/js/main.8f0688a4.js"
+    "static/js/main.75fbaeb9.js"
   ]
 }
