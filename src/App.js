@@ -3,7 +3,7 @@ import "./App.css";
 import SearchIcon from "./search.svg";
 import MediaShow from "./MediaShow";
 
-const API_URL = "http://www.omdbapi.com?apikey=1f544171";
+const API_URL = "https://www.omdbapi.com?apikey=1f544171";
 
 const App = () => {
   const [media, setMedia] = useState([]);
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="header">
-        <h1>CinemaSearch</h1>
+        <h1>MediaSearch</h1>
         <div className="search">
           <form onSubmit={(e) => e.preventDefault() & searchForMedia(search)}>
             <input
