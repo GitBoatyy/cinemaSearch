@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800&display=swap');
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+    font-family: 'Montserrat', sans-serif;
+      background-color: #6a6f72;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  padding: 4rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+}
+.header
+{
+    display: flex;
+    
+}
+h1 {
+  font-size: 3rem;
+  letter-spacing: 0.5px;
+  background: linear-gradient(
+    90deg,
+    #cd8853,
+    rgba(169, 112, 65, 0) 120%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
 }
 
-.App-link {
-  color: #61dafb;
+.search {
+  width: 71%;
+  margin: .1rem 1rem 0rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1.5rem 1.75rem;
+  border-radius: 3rem;
+  background: #383b3d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  padding-right: 1rem;
+  padding-left: 2rem;
+
+  outline: none;
+  color: #a1a1a1;
+  background: #383b3d;
+}
+
+.search img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+
+}
+
+
+.nomedia {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nomedia h2 {
+  font-size: 1.25rem;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+}
+
+.mediaContainer {
+width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.media {
+  width: 232.5px;
+  height: 345px;
+  margin: 1rem;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  border: none;
+  transition: all 0.2s ;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.media div:nth-of-type(1) {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  text-shadow: 2px 2px #25313abd ;
+  opacity: 0;
+  top: 0;
+  color: #f757ff;
+}
+
+.media:hover {
+  box-shadow: 0px 10px 6px -3px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+}
+
+.media div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+.media div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.media div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #25313abd;
+  padding: 5px 1px 5px 20px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.media div:nth-of-type(3) span {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #8a74d1;
+  text-shadow: 2px 2px black;
+}
+
+.media div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  color: #cd8853;
+  text-shadow: 2px 2px black;
+
+}
+
+.media:hover div:nth-of-type(2) {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.media:hover div:nth-of-type(3) {
+  background-color: transparent;
+}
+
+.media:hover div:nth-of-type(1) {
+  opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 4rem 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search {
+    padding: 1rem 1.75rem;
+    width: 100%;
+  }
+
+  .search input {
+    font-size: 1rem;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+  .mediaContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0%;
+    flex-wrap: wrap;
+  }
+  .media{
+margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app {
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+  .mediaContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+  }
+  .media {
+    width: "100%";
+    margin: 1rem;
   }
 }
