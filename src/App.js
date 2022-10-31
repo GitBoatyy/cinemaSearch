@@ -8,9 +8,10 @@ const API_URL = "https://www.omdbapi.com?apikey=1f544171";
 const App = () => {
   const [media, setMedia] = useState([]);
   const [search, setSearch] = useState("");
-  const searchForMedia = async (title) => {
-    const response = await fetch(`${API_URL}&s=${title}`);
+  const searchForMedia = async (media) => {
+    const response = await fetch(`${API_URL}&s=${media}`);
     const mediaData = await response.json();
+    console.log(mediaData);
     setMedia(mediaData.Search);
   };
 
@@ -26,7 +27,7 @@ const App = () => {
           <form onSubmit={(e) => e.preventDefault() & searchForMedia(search)}>
             <input
               type="text"
-              placeholder="Search for media"
+              placeholder="Search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onSubmit={() => searchForMedia(search)}
@@ -47,7 +48,7 @@ const App = () => {
         </div>
       ) : (
         <div className="nomedia">
-          <h2>No Media Found</h2>
+          <h2>None Found</h2>
         </div>
       )}
     </div>
