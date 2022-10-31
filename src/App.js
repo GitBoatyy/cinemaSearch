@@ -26,7 +26,7 @@ const App = () => {
           <form onSubmit={(e) => e.preventDefault() & searchForMedia(search)}>
             <input
               type="text"
-              placeholder="Search for a movie"
+              placeholder="Search for media"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               onSubmit={() => searchForMedia(search)}

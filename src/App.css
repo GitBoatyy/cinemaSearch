@@ -5,14 +5,19 @@
   box-sizing: border-box;
 }
 
-:root {
-  --font-roboto: "Roboto Slab", serif;
-  --font-raleway: "Raleway", sans-serif;
+html {
+  min-height: 100%;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
       background-color: #6a6f72;
+      background-image: url('./cinema.jpg');
+      min-height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
 }
 
 .app {
@@ -59,7 +64,7 @@ h1 {
   flex: 1;
   border: none;
   font-size: 1.5rem;
-  font-family: var(--font-raleway);
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   padding-right: 1rem;
   padding-left: 2rem;
@@ -89,7 +94,7 @@ h1 {
 .nomedia h2 {
   font-size: 1.25rem;
   color: #f9d3b4;
-  font-family: var(--font-raleway);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mediaContainer {
@@ -150,7 +155,7 @@ width: 100vw;
 }
 
 .media div:nth-of-type(3) span {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
